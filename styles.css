@@ -47,6 +47,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin: 5px;
 }
 
 button:hover {
@@ -56,4 +57,10 @@ button:hover {
 #result {
     margin-top: 20px;
     font-size: 20px;
+}
+
+#formula {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
 }
