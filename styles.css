@@ -1,66 +1,120 @@
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f9;
+    background: linear-gradient(135deg, #e4f1ff, #c0d6ff); /* Latar belakang gradasi biru terang */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    overflow: hidden;
 }
 
 .container {
     background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 300px;
+    border-radius: 20px; /* Sudut yang lebih halus */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2); /* Bayangan yang lebih dalam untuk efek 3D */
+    padding: 40px;
+    width: 90%; /* Lebar responsif */
+    max-width: 500px; /* Batas maksimum */
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi untuk efek hover */
+    background: linear-gradient(135deg, #ffffff, #f8f9fc); /* Gradasi latar belakang container */
+}
+
+.container:hover {
+    transform: translateY(-10px); /* Efek angkat saat hover */
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.3); /* Bayangan lebih dalam saat hover */
 }
 
 h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 32px; /* Ukuran font judul yang lebih besar */
+    margin-bottom: 25px;
+    color: #000957; /* Warna judul navy */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Bayangan teks untuk efek kedalaman */
+    font-weight: 700;
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* Ruang antar elemen input yang lebih baik */
+    text-align: left; /* Perataan label ke kiri */
 }
 
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    color: #344CB7; /* Warna label biru */
+    font-weight: 600; /* Menebalkan teks label */
+    font-size: 14px; /* Ukuran label yang proporsional */
 }
 
-select, input {
+input, select {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 14px; /* Padding yang lebih nyaman */
+    margin-bottom: 15px; /* Ruang antar input */
+    border: 1px solid #577BC1; /* Border biru muda */
+    border-radius: 8px; /* Sudut yang halus */
+    box-sizing: border-box; /* Memastikan padding dan border dihitung dalam lebar elemen */
+    background-color: #f9f9fc; /* Warna latar belakang input */
+    font-size: 16px; /* Ukuran teks input */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transisi untuk border */
+}
+
+input:focus, select:focus {
+    border-color: #344CB7; /* Warna border saat fokus */
+    outline: none; /* Menghilangkan outline default */
+    box-shadow: 0 0 8px rgba(52, 76, 183, 0.4); /* Efek glow saat fokus */
 }
 
 button {
-    background-color: #28a745;
+    background-color: #344CB7; /* Warna tombol biru */
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 14px 25px; /* Ukuran tombol yang nyaman */
+    border-radius: 8px; /* Sudut yang halus */
     cursor: pointer;
-    transition: background-color 0.3s;
-    margin: 5px;
+    transition: background-color 0.3s, transform 0.3s ease; /* Transisi yang halus */
+    margin-top: 15px;
+    font-weight: bold; /* Menebalkan teks tombol */
+    font-size: 16px; /* Ukuran font tombol */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Bayangan untuk tombol */
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #000957; /* Warna saat hover navy */
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+button:active {
+    transform: scale(0.98); /* Efek klik */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Reduksi bayangan saat tombol ditekan */
 }
 
 #result {
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 24px; /* Ukuran font hasil yang lebih besar */
+    color: #000957; /* Warna hasil navy */
+    font-weight: bold; /* Menebalkan hasil */
 }
 
 #formula {
     margin-top: 10px;
     font-size: 16px;
-    color: #555;
+    color: #FFEB00; /* Warna formula kuning */
+    font-weight: 600; /* Menebalkan teks formula */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Efek bayangan halus */
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 30px; /* Penyesuaian padding untuk layar kecil */
+    }
+
+    h1 {
+        font-size: 28px; /* Penyesuaian ukuran judul untuk layar kecil */
+    }
+
+    button {
+        font-size: 14px; /* Ukuran font tombol lebih kecil */
+        padding: 12px 20px; /* Penyesuaian padding tombol */
+    }
 }
